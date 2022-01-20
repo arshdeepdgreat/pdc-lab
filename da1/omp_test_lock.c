@@ -13,12 +13,12 @@ int main() {
         int tid = omp_get_thread_num();
 
         while (!omp_test_lock(&simple_lock))
-            printf_s("Thread %d - failed to acquire simple_lock\n",
+            printf("Thread %d - failed to acquire simple_lock\n",
                      tid);
 
-        printf_s("Thread %d - acquired simple_lock\n", tid);
+        printf("Thread %d - acquired simple_lock\n", tid);
 
-        printf_s("Thread %d - released simple_lock\n", tid);
+        printf("Thread %d - released simple_lock\n", tid);
         omp_unset_lock(&simple_lock);
     }
 

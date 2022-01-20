@@ -7,7 +7,8 @@
 
 omp_lock_t my_lock;
 
-int main() {
+int main() 
+{
    omp_init_lock(&my_lock);
 
    #pragma omp parallel num_threads(4)
