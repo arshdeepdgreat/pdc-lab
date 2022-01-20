@@ -1,5 +1,6 @@
 // omp_get_num_procs.cpp
 // compile with: /openmp
+//gcc -o outname -fopenmp input.c
 // 8 processor machine so output is 8
 #include <stdio.h>
 #include <omp.h>
