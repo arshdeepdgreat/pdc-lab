@@ -2,6 +2,7 @@
 // compile with: /openmp
 //gcc -o outname -fopenmp input.c
 // 8 processor machine so output is 8
+
 #include <stdio.h>
 #include <omp.h>
 
