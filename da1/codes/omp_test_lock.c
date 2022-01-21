@@ -8,7 +8,7 @@ omp_lock_t simple_lock;
 int main() {
     omp_init_lock(&simple_lock);
 
-    #pragma omp parallel num_threads(4)
+    #pragma omp parallel num_threads(2)
     {
         int tid = omp_get_thread_num();
 

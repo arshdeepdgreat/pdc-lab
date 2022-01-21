@@ -4,10 +4,13 @@
 
 #include <stdio.h>
 #include <omp.h>
+
 omp_lock_t my_lock;
+
 int main() 
 {
    omp_init_lock(&my_lock);
+
    #pragma omp parallel num_threads(4)
    {
       int tid = omp_get_thread_num( );
@@ -20,5 +23,6 @@ int main()
          omp_unset_lock(&my_lock);
       }
    }
+
    omp_destroy_lock(&my_lock);
 }
